@@ -22,7 +22,7 @@ public class DatabaseInspector {
     @EventListener(ApplicationReadyEvent.class)
     public void inspectBatchTables() {
         log.info("Inspecting Spring Batch tables in the H2 database...");
-        String[] tables = new String[] {"BATCH_JOB_INSTANCE", "BATCH_JOB_EXECUTION", "BATCH_STEP_EXECUTION", "BATCH_JOB_EXECUTION_PARAMS"};
+        String[] tables = new String[] {"BATCH_JOB_INSTANCE", "BATCH_JOB_EXECUTION", "BATCH_STEP_EXECUTION", "BATCH_JOB_EXECUTION_PARAMS", "EMPLOYEE_WORKLOG", "PAYROLL"};
         for (String table : tables) {
             try {
                 // Check existence
@@ -48,4 +48,3 @@ public class DatabaseInspector {
         }
     }
 }
-
